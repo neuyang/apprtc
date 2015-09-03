@@ -155,7 +155,6 @@ public class AppRTCProximitySensor implements SensorEventListener {
       // Added in API level 9.
       info.append(", min delay: " + proximitySensor.getMinDelay());
     }
- /*   
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
       // Added in API level 20.
       info.append(", type: " + proximitySensor.getStringType());
@@ -166,7 +165,6 @@ public class AppRTCProximitySensor implements SensorEventListener {
       info.append(", reporting mode: " + proximitySensor.getReportingMode());
       info.append(", isWakeUpSensor: " + proximitySensor.isWakeUpSensor());
     }
-    */
     Log.d(TAG, info.toString());
   }
 

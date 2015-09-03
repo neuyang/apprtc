@@ -142,7 +142,6 @@ public class RoomParametersFetcher {
           break;
         }
       }
- /*     
       // Request TURN servers.
       if (!isTurnPresent) {
         LinkedList<PeerConnection.IceServer> turnServers =
@@ -152,7 +151,7 @@ public class RoomParametersFetcher {
           iceServers.add(turnServer);
         }
       }
-*/
+
       SignalingParameters params = new SignalingParameters(
           iceServers, initiator,
           clientId, wssUrl, wssPostUrl,
@@ -161,7 +160,7 @@ public class RoomParametersFetcher {
     } catch (JSONException e) {
       events.onSignalingParametersError(
           "Room JSON parsing error: " + e.toString());
-    } catch (Exception e) {
+    } catch (IOException e) {
       events.onSignalingParametersError("Room IO error: " + e.toString());
     }
   }
